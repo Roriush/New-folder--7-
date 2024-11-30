@@ -1,11 +1,13 @@
 import express from "express";
 import cors from `cors`;
+import mainRouter from './routes/mainRouter.js';
 
 const app = express();
 
 // Middlewares
 app.use(express.json());
 app.use(cors());
+app use ('/', mainRouter);
 
 app.get('/', (request, response) => {
     const miMensaje = 'Mi primera api'
