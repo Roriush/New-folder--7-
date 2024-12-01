@@ -13,6 +13,20 @@ export const getProyectos = (req, res) => {
 
 
 export const getProyectobyID = (req, res) => {
+
+const {id} = req.params ;
+
+if (isNaN(Number(id))) {
+    return res.status(400).json({status:400, message: 'El id no es valido'})
+
+const proyectobyID = data.find(proyecto => proyecto.id === id);
+
+    console log (!proyecto);
+    return res.status(400).json({status:400, message: 'El proyecto no existe'})
+}
+
+
+
     console log (req.params.id);
    res.status (200).json({
         status:200,
