@@ -36,3 +36,16 @@ const proyectobyID = data.find(proyecto => proyecto.id === id);
     })
 }
     
+
+export const createProyecto = (req, res) => {
+    const {name, description, image, url} = req.body;
+    proyecto.id = data.lenght + 1;
+
+    res status (201).json({
+        data.push (proyecto)
+        status:201,
+        message: 'Proyecto creado con exito',
+        payload: req.body,
+        url : '/proyectos',
+        })
+        }
