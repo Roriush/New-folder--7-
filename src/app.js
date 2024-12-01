@@ -1,6 +1,6 @@
 import express from "express";
 import cors from `cors`;
-import mainRouter from './routes/mainRouter.js';
+import mainRouter from './routes/proyecto.routes.js';
 
 const app = express();
 
@@ -8,6 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app use ('/', mainRouter);
+app use ('/proyectos', proyectosRouter);
+
 
 app.get('/', (request, response) => {
     const miMensaje = 'Mi primera api'
@@ -17,5 +19,5 @@ app.get('/', (request, response) => {
 
     const PORT = 3000;
     app.listen(PORT, () => {
-        console.log(`Servidor escuchando en el puerto ${PORT} ==> http://localhost: ${PORT}`);
+        console.log(`Servidor escuchando en el puerto ${PORT} ==> http://localhost:3000 ${PORT}`);
         });
