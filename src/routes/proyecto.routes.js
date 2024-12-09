@@ -1,11 +1,11 @@
 import {Router} from 'express';
-import {getProyectos} from '../controllers/user.controller';
+import { getProyectos } from '../controllers/proyecto.controller.js';
 
-const Router = express.Router();
-const userRoutes = Router;
 
-router get ('/', getHome);
-router.post('/', getProyectos);
-router get ('/id', getHome);
+const router = new Router();
 
-export default userRoutes;
+router.get('/', getProyectos);
+// router.post('/', createProyectos);
+// router.get('/id', getHomeById);
+
+export default router;

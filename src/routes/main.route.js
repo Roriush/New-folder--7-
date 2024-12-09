@@ -1,9 +1,8 @@
 import {Router} from 'express';
 import {getProyectos} from '../controllers/proyecto.controller.js';
 
-const Router = express.Router();
-const userRoutes = Router;
+const router = new Router();
 
-router get ('/', getHome);
+router.get('/', getProyectos);
 
-export default Routes;
+export default router;
