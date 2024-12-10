@@ -27,7 +27,7 @@ async function connect MongoDB() {
             console.log("Connected to MongoDB");
             const books = await Book.find();
             console.log(books);
-            
+
             } catch (err) {
                 console.error(error.message);
                 }
@@ -35,4 +35,9 @@ async function connect MongoDB() {
                     await mongoose.disconnect();
                     console.log("Connection closed");
  }
-                main().catch(console.error)
+                main().catch(console.error),
+                process.on('uncaughtException', console.error);
+                process.on('unhandledRejection', console.error);
+
+      connect MongoDB();
+    }
