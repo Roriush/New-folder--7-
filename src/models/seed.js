@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import connectToDB from "./db";
-
+import  data from "./ database/ data.js";
 connectToDB ();
 
 const generateAuthors = () => {
@@ -14,4 +14,5 @@ const generateAuthors = () => {
             }
             return authors;
             };
-            
+
+seedDatabase ()
