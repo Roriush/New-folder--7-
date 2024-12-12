@@ -1,11 +1,14 @@
 import {Router} from 'express';
-import { getProyectos } from '../controllers/proyecto.controller.js';
+import { getProyectos, deleteProyecto, getProyectoById, getProyectos, updateProyecto } from '../controllers/proyecto.controller.js';
 
 
 const router = new Router();
 
 router.get('/', getProyectos);
-// router.post('/', createProyectos);
-// router.get('/id', getHomeById);
+router.post('/', createProyectos);
+router.get('/id', getHomeById);
+router.put('/:id', updateProyecto)
+router.delete('/:id', deleteProyecto)
 
-export default router;
+
+export default router

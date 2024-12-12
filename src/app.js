@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
-import proyectosRouter from './routes/proyecto.routes.js';
+import proyectosRouter from './routes/main.route.js';
+import { db } from './database/config.js';
+import { useEffect} from 'react';
 
 const app = express();
 
@@ -21,3 +23,15 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT} ==> http://localhost:3000 ${PORT}`);
         });
+
+function App () {
+    UseEffect (() => {
+        fetch: ('http://localhost:5173')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        },[])
+        }
+
+        export default App;
+
+        

@@ -1,10 +1,11 @@
 import Author from '../models/Author.js';
+import data from '../data.js';
+
 
 // Obtener todos los autores
 export const getAllAuthors = async (req, res) => {
 try {
-const authors = await Author.find(); // Obtiene todos los autores de la
-base de datos
+const authors = await Author.find(); // Obtiene todos los autores de la base de datos
 res.status(200).json(authors);
 } catch (error) {
 res.status(500).json({ message: 'Error obteniendo autores', error });
